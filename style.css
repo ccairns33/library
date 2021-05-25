@@ -15,7 +15,7 @@ html,body{
 }
 
 .pink-color{
-    color:pink;
+    color:rgb(255, 174, 187);
 }
 .pink-shadow{
     text-shadow: 1px 1px 0px rgba(248, 165, 179, 0.384);
@@ -61,7 +61,7 @@ html,body{
     letter-spacing: 1px;
 }
 .pink-color-background{
-    background-color:rgb(241, 159, 173);
+    background-color:rgb(255, 159, 175);
 
 }
 .center{
