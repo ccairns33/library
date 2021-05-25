@@ -6,7 +6,7 @@ html,body{
     font-family: 'Raleway', sans-serif;
     background:white; 
      /* background necessary for samsung internet, displays black bar otherwise */
-     color:grey;
+     color:rgb(145, 145, 145);
  }
  .container{
 
@@ -31,7 +31,7 @@ html,body{
     margin-bottom: 2rem;
 }
 .dark-grey-color{
-    color:rgb(56, 56, 56);
+    color:rgb(131, 131, 131);
     
 }
 
@@ -50,12 +50,12 @@ html,body{
     padding-top:.5rem;
     padding-bottom: .5rem;
     border:none;
-    font-weight: 500;
-    color:rgb(90, 88, 88);
+    font-weight: bold;
+    color:rgb(255, 255, 255);
     letter-spacing: 1px;
 }
 .pink-color-background{
-    background-color:pink;
+    background-color:rgb(241, 159, 173);
 
 }
 .center{
@@ -64,10 +64,18 @@ html,body{
 .d-flex{
     display:flex;
 }
+.flex-dir-col{
+    flex-direction: column;
+}
 .btn:hover{
     cursor: pointer;
     box-shadow: 1px -1px 8px 2px rgba(230, 229, 229, 0.75);
 }
-.labels{
+label{
     letter-spacing: 1px;
+    padding-bottom: .3rem;
+    font-weight: bold;
+}
+.marginl-0{
+    margin-left: 0;
 }
