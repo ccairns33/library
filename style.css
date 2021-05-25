@@ -6,8 +6,8 @@ html,body{
     font-family: 'Raleway', sans-serif;
     background:white; 
      /* background necessary for samsung internet, displays black bar otherwise */
-     color:rgb(145, 145, 145);
- }
+     color:rgb(88, 88, 88);
+    }
  .container{
 
     margin-left: 5%;
@@ -18,7 +18,7 @@ html,body{
     color:pink;
 }
 .pink-shadow{
-    text-shadow: 1px 1px 0px rgba(248, 165, 179, 1);
+    text-shadow: 1px 1px 0px rgba(248, 165, 179, 0.384);
 }
 .divider{
     border-bottom: 1px solid rgb(199, 198, 198);
@@ -31,10 +31,16 @@ html,body{
     margin-bottom: 2rem;
 }
 .dark-grey-color{
-    color:rgb(131, 131, 131);
+    color:rgb(88, 88, 88);
     
 }
+.grey-color{
+    color:rgba(112, 112, 112, 0.616);
+}
+.grey-color-noth{
+    color:rgb(102, 102, 102);
 
+}
 .form-control{
     display:block;
     width:100%;
@@ -74,8 +80,18 @@ html,body{
 label{
     letter-spacing: 1px;
     padding-bottom: .3rem;
-    font-weight: bold;
 }
 .marginl-0{
     margin-left: 0;
+}
+table{
+    width:100%;
+}
+th{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+/* with cell space 0, no spaces between the borders */
+    border-bottom: 1px solid rgb(189, 189, 189);
+    border-top: 1px solid rgb(189, 189, 189);
+
 }
