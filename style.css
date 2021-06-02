@@ -90,7 +90,7 @@ h1{
 .flex-dir-col{
     flex-direction: column;
 }
-.btn:hover, .deleteBtn:hover{
+.btn:hover, .deleteBtn:hover, .readBtn:hover{
     cursor: pointer;
     box-shadow: 1px 1px 5px 3px rgb(250, 211, 211);
 }
@@ -120,7 +120,7 @@ th{
     border-top: 1px solid rgb(189, 189, 189);
     text-decoration: underline;
     text-transform: uppercase;
-    font-size:.88rem;
+    font-size:.8rem;
     font-weight: normal;
 
 }
@@ -134,7 +134,7 @@ td{
     font-size: .9rem;
 }
 .deleteBtn{
-    background-color: rgb(247, 112, 112);
+    background-color: rgb(250, 98, 98);
     padding-top:.5rem;
     padding-bottom: .5rem;
     border:none;
@@ -142,4 +142,16 @@ td{
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: .6rem;
+}
+
+.readBtn{
+    padding-top:.5rem;
+    padding-bottom: .5rem;
+    border:none;
+    color:rgb(255, 255, 255);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: .6rem;
+    background-color:rgb(255, 148, 166);
+
 }
