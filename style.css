@@ -4,24 +4,39 @@ html,body{
     margin:0;
     padding:0;
     font-family: 'Raleway', sans-serif;
-    background:white; 
-     /* background necessary for samsung internet, displays black bar otherwise */
-     color:rgb(88, 88, 88);
+    /* background: rgb(255, 248, 253);
+    background: linear-gradient(165deg, rgb(252, 248, 250) 53%, rgb(255, 247, 250) 66%);      background necessary for samsung internet, displays black bar otherwise
+     color:rgb(88, 88, 88); */
     }
  .container{
 
     margin-left: 5%;
     margin-right: 5%;
 }
+.margin-leftright5{
+    margin-left:5%;
+    margin-right: 5%;
 
+}
+.no-margin{
+    margin-left:0;
+    margin-right: 0;
+}
+
+header{
+    background-color: #fff9f9;
+}
+h1{
+    margin:0;
+}
 .pink-color{
-    color:rgb(255, 174, 187);
+    color:rgb(255, 148, 166);
 }
 .pink-shadow{
     text-shadow: 1px 1px 0px rgba(248, 165, 179, 0.384);
 }
 .divider{
-    border-bottom: 1px solid rgb(199, 198, 198);
+    border-bottom: 1px solid rgb(247, 236, 236);
 }
 .letter-spacing2{
     letter-spacing: 2px;
@@ -30,12 +45,14 @@ html,body{
     margin-top:2rem;
     margin-bottom: 2rem;
 }
-.dark-grey-color{
-    color:rgb(88, 88, 88);
-    
+.padding-1{
+    padding-top:1rem;
+    padding-bottom:1rem;
+
 }
+
 .grey-color{
-    color:rgba(112, 112, 112, 0.616);
+    color:rgba(85, 85, 85, 0.616);
 }
 .grey-color-noth{
     color:rgb(102, 102, 102);
@@ -56,12 +73,12 @@ html,body{
     padding-top:.5rem;
     padding-bottom: .5rem;
     border:none;
-    font-weight: bold;
     color:rgb(255, 255, 255);
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 .pink-color-background{
-    background-color:rgb(255, 159, 175);
+    background-color:rgb(255, 148, 166);
 
 }
 .center{
@@ -73,25 +90,56 @@ html,body{
 .flex-dir-col{
     flex-direction: column;
 }
-.btn:hover{
+.btn:hover, .deleteBtn:hover{
     cursor: pointer;
-    box-shadow: 1px -1px 8px 2px rgba(230, 229, 229, 0.75);
+    box-shadow: 1px 1px 5px 3px rgb(250, 211, 211);
 }
 label{
     letter-spacing: 1px;
     padding-bottom: .3rem;
+    text-transform: uppercase;
+    font-size: .85rem;
 }
 .marginl-0{
     margin-left: 0;
 }
 table{
+    table-layout: fixed;
     width:100%;
+    /* must have explicit width and table layout fixed for the header NOT to move when adding data */
+}
+thead{
+    text-align: left;
 }
 th{
+    text-align:left;
     padding-bottom: 1rem;
     padding-top: 1rem;
 /* with cell space 0, no spaces between the borders */
     border-bottom: 1px solid rgb(189, 189, 189);
     border-top: 1px solid rgb(189, 189, 189);
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size:.88rem;
+    font-weight: normal;
 
+}
+td{
+
+    text-align: left;
+    color:black;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    padding-top:.5rem;
+    padding-bottom: .5rem;
+    font-size: .9rem;
+}
+.deleteBtn{
+    background-color: rgb(247, 112, 112);
+    padding-top:.5rem;
+    padding-bottom: .5rem;
+    border:none;
+    color:rgb(255, 255, 255);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: .6rem;
 }

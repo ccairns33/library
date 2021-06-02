@@ -12,27 +12,25 @@
 
 </head>
 <body>
-<div class="container">
-
-    <header>
-        <h1 class= "pink-shadow letter-spacing2 grey-color"> <i class="fas fa-bible fa-2x pink-color"></i> My<span class="pink-color">Library</span></h1>
+    <header >
+        <h1 class= " margin-leftright5 padding-1 pink-shadow letter-spacing2 "> <i class="fas fa-bible fa-2x pink-color"></i> <span class="pink-color">MyLibrary</span></h1>
     </header>
-    <div class="divider">
+    <div class="divider "></div>
+<div class="container">
     
-    </div>
 
-    <form id="book-form" class="margin-2 dark-grey-color">
+    <form id="book-form" class="margin-2 ">
         <div class="form-group flex-dir-col d-flex">
             <label for="title"><span class="labels">Title</span></label>
-            <input class= "form-control" id="title "type="text" >
+            <input class= "form-control" id="title" type="text" >
         </div>
         <div class="form-group margint-1 flex-dir-col d-flex">
             <label for="author"><span class="labels">Author</span></label>
-            <input class= "form-control" id="author "type="text" >
+            <input class= "form-control" id="author"type="text" >
         </div>
         <div class="form-group margint-1 flex-dir-col d-flex">
             <label for="page-num"><span class="labels"># of Pages</span></label>
-            <input class= "form-control" id="page-num "type="text" >
+            <input class= "form-control" id="page-num"type="text" >
         </div>
         <div class="form-group margint-1 ">
             <label for="read"><span class="labels">Mark as Read</span></label>
@@ -43,13 +41,13 @@
         </div>
     </form>
 
-    <table cellspacing=0 class="table grey-color-noth">
-        <thead>
+    <table cellspacing=0 class="table ">
+        <thead >
             <tr>
                 <th>Title</th>
                 <th>Author</th>
                 <th># of Pages</th>
-                <th>Read</th>
+                <th>Read Status</th>
                 <th> </th>
             </tr>
         </thead>
@@ -62,5 +60,6 @@
 
 </div>
 
+<script src="app.js"></script>
 </body>
 </html>
