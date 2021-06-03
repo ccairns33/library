@@ -1,35 +1,45 @@
- function Book(title, author, pages, readStatus) {
+ class Book {
+  constructor(title, author, pages, readStatus) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.readStatus = readStatus;
-    
+
+  }
 }
-  var book;
   const form = document.querySelector("form");
   const tbody = document.querySelector("tbody");
   const table = document.querySelector("table");
   const readBtn = document.getElementById("readBtn");
-  function addEntry(e){
+
+  function addEntryBook(e){
+    //adds fields to book object
     e.preventDefault();
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const pageNum = document.getElementById('page-num').value;
     const readStatus = document.getElementById("read").checked; //true or false value
+    
+    //making a new book object
+    const book = new Book(title, author, pageNum, readStatus);
+
+    displayBooks(book);
+
+    
+  }
+  function displayBooks(book){
     let read=""; 
-    if (readStatus){
+    if (book.readStatus){
       read = "read";
     }
     else {
       read = "not read";
     }
-    book = new Book(title, author, pageNum, readStatus);
-    //making a new book object
     tbody.innerHTML += `
       <tr>
-          <td> ${title}</td>
-          <td> ${author}</td>
-          <td> ${pageNum}</td>
+          <td> ${book.title}</td>
+          <td> ${book.author}</td>
+          <td> ${book.pages}</td>
           <td> <button class="readBtn"> ${read}</button></td> 
           <td> <button class="deleteBtn"> Delete</button></td>
 
@@ -59,6 +69,6 @@ function changeReadStatus(e){
     return;
   }
 }
-  form.addEventListener("submit", addEntry);
+  form.addEventListener("submit", addEntryBook);
   table.addEventListener("click", changeReadStatus); //since the btn is created dynamically must add event listener to table
   table.addEventListener("click", deleteBook);
