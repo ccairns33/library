@@ -45,6 +45,15 @@
 
       </tr>
     `;
+
+    // after displaying, clear form fielda
+    clearFields();
+  }
+  function clearFields(){
+    document.getElementById('title').value = "";
+    document.getElementById('author').value = "";
+    document.getElementById('page-num').value = "";
+    document.getElementById("read").checked = false;
   }
   function deleteBook(e){
     if (e.target.classList.contains('deleteBtn')){
