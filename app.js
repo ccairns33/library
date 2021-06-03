@@ -11,19 +11,31 @@
   const tbody = document.querySelector("tbody");
   const table = document.querySelector("table");
   const readBtn = document.getElementById("readBtn");
+  const container = document.getElementById("container");
+
 
   function addEntryBook(e){
     //adds fields to book object
-    e.preventDefault();
+    e.preventDefault(); // prevents refresh upon submit
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const pageNum = document.getElementById('page-num').value;
     const readStatus = document.getElementById("read").checked; //true or false value
     
-    //making a new book object
-    const book = new Book(title, author, pageNum, readStatus);
+    //validate fields, make sure they aren't empty
 
-    displayBooks(book);
+    if (title == "" || author == "" || pageNum == ""){
+      showAlert("Please fill in all fields.", "invalid");
+      
+    }
+    else {
+      //making a new book object
+      const book = new Book(title, author, pageNum, readStatus);
+
+      displayBooks(book);
+    }
+
+    
 
     
   }
@@ -49,12 +61,29 @@
     // after displaying, clear form fielda
     clearFields();
   }
+
+  function showAlert(message, className) {
+    //used for both success and validation failure
+    //same principle for success but will get so annoying that im not going to add it 
+    const div = document.createElement('div');
+    div.className = `alert alert-${className} d-flex alert-spacing`
+    div.appendChild(document.createTextNode(message));
+    const btn = document.createElement("button");
+    btn.innerHTML = "Close"
+    btn.className = "alert-btn"
+    div.appendChild(btn);
+    const container = document.querySelector(".container");
+    const form = document.querySelector("form");
+    container.insertBefore(div, form);
+  }
+
   function clearFields(){
     document.getElementById('title').value = "";
     document.getElementById('author').value = "";
     document.getElementById('page-num').value = "";
     document.getElementById("read").checked = false;
   }
+
   function deleteBook(e){
     if (e.target.classList.contains('deleteBtn')){
       const btn = e.target;
@@ -78,6 +107,16 @@ function changeReadStatus(e){
     return;
   }
 }
+function deleteAlert(e){
+  if (e.target.classList.contains('alert-btn')){
+    const btn = e.target;
+    btn.parentElement.remove();
+  }
+  else{
+    return;
+  }
+}
   form.addEventListener("submit", addEntryBook);
   table.addEventListener("click", changeReadStatus); //since the btn is created dynamically must add event listener to table
   table.addEventListener("click", deleteBook);
+  container.addEventListener("click", deleteAlert);
