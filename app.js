@@ -64,7 +64,6 @@
 
   function showAlert(message, className) {
     //used for both success and validation failure
-    //same principle for success but will get so annoying that im not going to add it 
     const div = document.createElement('div');
     div.className = `alert alert-${className} d-flex alert-spacing`
     div.appendChild(document.createTextNode(message));
@@ -75,6 +74,10 @@
     const container = document.querySelector(".container");
     const form = document.querySelector("form");
     container.insertBefore(div, form);
+
+    //remove in 3 seconds
+
+    setTimeout(() => document.querySelector('.alert').remove(), 3500);
   }
 
   function clearFields(){
