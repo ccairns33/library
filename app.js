@@ -57,6 +57,8 @@
 
       </tr>
     `;
+    //show success
+    showAlert("Book Added!", "success");
 
     // after displaying, clear form fielda
     clearFields();
@@ -77,7 +79,7 @@
 
     //remove in 3 seconds
 
-    setTimeout(() => document.querySelector('.alert').remove(), 3500);
+    setTimeout(() => document.querySelector('.alert').remove(), 3000);
   }
 
   function clearFields(){

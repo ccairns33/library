@@ -176,6 +176,11 @@ text {
     font-size: .7rem;
     background-color: white;
 }
+.alert-success{
+    background-color: rgb(152, 219, 152);
+    color:white;
+
+}
 .alert-spacing{
     justify-content: space-between;
     align-items: center;
