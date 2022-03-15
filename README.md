@@ -72,7 +72,7 @@ A library managment app built with Javascript, HTML, and CSS. When the user adds
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ccairns33/inventory-app-production.git
+   git clone https://github.com/ccairns33/library.git
    ```
 
 
