@@ -53,7 +53,7 @@
 
 ![InevntoryApp Screen Shot][product-screenshot]
 
-A library managment app built with Javascript, HTML, and CSS. When the user adds a book, a new instance of the Book class with all the specifcations provided by the user. Javascript DOM manipulation is used in order to remove and edit the user's input.
+A library managment app built with Javascript, HTML, and CSS. When the user adds a book, a new instance of the Book class is created and displayed with all the specifcations provided by the user. Javascript DOM manipulation is used in order to remove and edit the user's input.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
